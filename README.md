@@ -1,6 +1,8 @@
-mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on [FPDF](http://www.fpdf.org/)
-and [HTML2FPDF](http://html2fpdf.sourceforge.net/) (see [CREDITS](CREDITS.txt)), with a number of enhancements.
-mPDF was written by Ian Back and is released under the [GNU GPL v2 licence](LICENSE.txt).
+mPDF is a PHP library which generates PDF files from UTF-8 encoded HTML.
+
+It is based on [FPDF](http://www.fpdf.org/) and [HTML2FPDF](http://html2fpdf.sourceforge.net/)
+(see [CREDITS](CREDITS.txt)), with a number of enhancements. mPDF was written by Ian Back and is released
+under the [GNU GPL v2 licence](LICENSE.txt).
 
 [![Build Status](https://travis-ci.org/mpdf/mpdf.svg?branch=development)](https://travis-ci.org/mpdf/mpdf)
 
@@ -10,7 +12,7 @@ mPDF was written by Ian Back and is released under the [GNU GPL v2 licence](LICE
 Requirements
 ============
 
-mPDF 7.0 requires PHP `^5.6 || ~7.0.0 || ~7.1.0`. PHP `mbstring` and `gd` extensions have to be loaded.
+**mPDF 7.0** requires PHP `^5.6 || ~7.0.0 || ~7.1.0`. PHP `mbstring` and `gd` extensions have to be loaded.
 
 Additional extensions may be required for some advanced features such as `zlib` for compression of output and
 embedded resources such as fonts, `bcmath` for generating barcodes or `xml` for character set conversion
@@ -34,7 +36,7 @@ $ composer require mpdf/mpdf
 Usage
 =====
 
-The simplest usage of the library would be as follows:
+The simplest usage (since version 7.0) of the library would be as follows:
 
 ```php
 <?php
@@ -85,7 +87,7 @@ Online manual is available at https://mpdf.github.io/.
 Contributing
 ============
 
-See [CONTRIBUTING.md][2] file in the project.
+See [CONTRIBUTING.md](https://github.com/mpdf/mpdf/blob/development/.github/CONTRIBUTING.md) file in the project.
 
 Unit Testing
 ============
@@ -100,4 +102,4 @@ To execute tests, run `vendor/bin/phpunit` from the command line while in the mP
 Any assistance writing unit tests for mPDF is greatly appreciated. If you'd like to help, please
 note that any PHP file located in the `/tests/` directory will be autoloaded when unit testing.
 
-[1]: https://mpdf.github.info
+[1]: https://mpdf.github.io
