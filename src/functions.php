@@ -146,18 +146,18 @@ function code2utf_lo_callback($matches)
 	return code2utf($matches[1], 1);
 }
 
-if (!function_exists('codeHex2utf_callback') {
+
 	function codeHex2utf_callback($matches)
 	{
 		return codeHex2utf($matches[1], 0);
 	}
-}
-if (!function_exists('codeHex2utf_lo_callback') {
+
+
 	function codeHex2utf_lo_callback($matches)
 	{
 		return codeHex2utf($matches[1], 1);
 	}
-}
+
 /**
  * PDF documents use the internal date format: (D:YYYYMMDDHHmmSSOHH'mm'). The date format has these parts:
  *
