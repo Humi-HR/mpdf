@@ -971,11 +971,14 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 		$this->tableOfContents = new TableOfContents($this, $this->sizeConverter);
 
 		if (function_exists('base_path'))
+		{
 			$this->cache = new Cache(base_path().'/storage/temp');
-		else
+			$this->fontCache = new FontCache(new Cache(base_path().'/storage/temp' . '/ttfontdata'));
+		} else {
 			$this->cache = new Cache($config['tempDir']);
-		
-		$this->fontCache = new FontCache(new Cache($config['tempDir'] . '/ttfontdata'));
+			$this->fontCache = new FontCache(new Cache($config['tempDir'] . '/ttfontdata'));
+		}
+		// $this->fontCache = new FontCache(new Cache($config['tempDir'] . '/ttfontdata'));
 
 		$this->fontFileFinder = new FontFileFinder($config['fontDir']);
 
